@@ -1,25 +1,35 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import Judul from './Components/Judul';
+
 
 export default class App extends React.Component {
     render() {
         return (
           <View style={styles.container}>
-            <Text>Nama : Ivan Yusuf Satria</Text>
-            <Text>Kelas : XI RPL 4</Text>
-            <Text>No Absen : 18</Text>
+          <Judul title="BIODATA"/>
+          <Judul title="USERNAME"/>
+          <Judul title="PASSWORD"/>
+            <Text style={warna.teks}>Nama : Ivan Yusuf Satria</Text>
+            <Text style={warna.teks}>Kelas : XI RPL 4</Text>
+            <Text style={warna.teks}>No Absen : 18</Text>
             <Image
-            style={{height:256,width:191}}
-            source={require('./1.jpg')}/>
+            style={{height:250,width:200}}
+            source={require('./2.jpg')}/>
       </View>
     );
   }
+}
+const warna={
+	teks:{
+		color:'#FFFFFF'
+	}
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FF0000',
     alignItems: 'center',
     justifyContent: 'center',
   },
